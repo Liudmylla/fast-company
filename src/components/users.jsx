@@ -15,10 +15,12 @@ const Users = () => {
             case 0:
                 result = "Пичалька, никто не тусанет с тобой сегодня"
                 break;
-
-            case 2:
-            case 3:
-            case 4:
+            case 12:
+            case 13:
+            case 14:
+                result = number + "  человек тусанет с тобой сегодня"
+                break;
+            case +String(number).match(/\d*[234]$/):
 
                 result = number + "  человекa тусанет с тобой сегодня"
 
