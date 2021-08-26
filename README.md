@@ -1,5 +1,14 @@
 # Getting Started with Create React App
 
+  <td>
+                {qualities.map((q) => (
+                    <span
+                        className={getColor(q.color)}
+                    >{q.name}</span>
+                ))}
+            </td>
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
