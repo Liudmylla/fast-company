@@ -1,9 +1,7 @@
 import React from 'react';
 import User from './user';
 
-const Users = ({ users, ...rest }) => {
-
-
+const Users = ({ users, onDelete, onToggle }) => {
     return (
 
 
@@ -15,6 +13,7 @@ const Users = ({ users, ...rest }) => {
                     <th scope="col">Профессия</th>
                     <th scope="col">Встретился,раз</th>
                     <th scope="col">Оценка</th>
+                    <th scope="col">Избранное</th>
                 </tr>
             </thead>
             <tbody>
@@ -22,8 +21,10 @@ const Users = ({ users, ...rest }) => {
 
                     <User
                         key={user._id}
-                        {...rest}
                         {...user}
+                        onDelete={onDelete}
+                        onToggle={onToggle}
+
                     />
 
                 ))}
